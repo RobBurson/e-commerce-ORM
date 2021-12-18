@@ -1,0 +1,25 @@
+{
+  "name": "e-commerce-orm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RobBurson/e-commerce-ORM.git"
+  },
+  "author": "RobBurson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobBurson/e-commerce-ORM/issues"
+  },
+  "homepage": "https://github.com/RobBurson/e-commerce-ORM#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0"
+  }
+}

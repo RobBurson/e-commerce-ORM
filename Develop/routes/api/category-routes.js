@@ -6,11 +6,11 @@ const { Category, Product } = require('../../models');
 router.get('/', (req, res) => {
   // find all categories
   Category.findAll({
-    attributes: ["id", "category_name"],
+    attributes: ['id', 'category_name'],
     include: [
       {
         model: Product,
-        attributes: ["id", "product_name", "price", "stock", "category_id"],
+        attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
       },
     ],    
   })
@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ["id", "product_name", "price", "stock", "category_id"],
+        attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
       },
     ],
   })
@@ -74,7 +74,7 @@ router.put('/:id', (req, res) => {
   )
   .then((dbCategoryData) => {
     if (!dbCategoryData) {
-      res.status(404).json({ message: "No category found with given id."});
+      res.status(404).json({ message: "No category found with given id." });
       return;
     }
     res.json(dbCategoryData);
@@ -94,7 +94,7 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbCategoryData => {
     if (!dbCategoryData) {
-      res.status(404).json({ message: "No category found with given id."});
+      res.status(404).json({ message: "No category found with given id." });
       return;
     }
     res.json(dbCategoryData);
